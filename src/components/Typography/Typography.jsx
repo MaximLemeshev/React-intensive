@@ -1,11 +1,15 @@
 import styles from "./Typography.module.css";
+import PasswordInput from "../PasswordInput/PasswordInput";
+import ButtonSubmit from "../Button/ButtonSubmit";
+import ErrorElement from "../Error/ErrorElement";
 const Typography = () => {
   return (
     <>
       <div className={styles.card}>
-        <h1>Your name</h1>
-        <div className={styles.title}>Title:</div>
-        <div className={styles.info}>Info:</div>
+        <h1>Login</h1>
+        <PasswordInput />
+        <ButtonSubmit />
+        <ErrorElement />
       </div>
     </>
   );

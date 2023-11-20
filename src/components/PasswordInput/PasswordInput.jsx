@@ -22,12 +22,18 @@ const PasswordInput = () => {
     <div>
       <label>
         Username:
-        <input type="text" value={username} onChange={handleUsernameChange} />
+        <input
+          className={styles.input__name}
+          type="text"
+          value={username}
+          onChange={handleUsernameChange}
+        />
       </label>
       <br />
       <label>
         Password:
         <input
+          className={styles.input__password}
           type={showPassword ? "text" : "password"}
           value={password}
           onChange={handlePasswordChange}
