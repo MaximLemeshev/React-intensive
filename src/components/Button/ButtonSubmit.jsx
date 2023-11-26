@@ -1,8 +1,8 @@
+import { useContext } from "react";
+import { MyContext } from "../../MyContext/MyContext";
+
 const ButtonSubmit = () => {
-  return (
-    <>
-      <button type="button">Submit</button>
-    </>
-  );
+  const { locale, messages, changeLocale } = useContext(MyContext);
+  return <button type="button">{messages[locale].log_in}</button>;
 };
 export default ButtonSubmit;
