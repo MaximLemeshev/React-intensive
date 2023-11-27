@@ -1,14 +1,16 @@
 import { useState } from "react";
 import styles from "./PasswordInput.module.css";
-import { MyContext } from "../../MyContext/MyContext";
-import { useContext } from "react";
+// import { MyContext } from "../../MyContext/MyContext";
+// import { useContext } from "react";
+import { useLocalization } from "../../context/LocalizationContext";
 
 const PasswordInput = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  const { locale, messages, changeLocale } = useContext(MyContext);
+  // const { locale, messages, changeLocale } = useLocalization();
+  const { localization } = useLocalization();
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -35,7 +37,7 @@ const PasswordInput = () => {
       </label>
       <br />
       <label>
-        <div className={styles.label_disc}> {messages[locale].password}</div>
+        <div className={styles.label_disc}> {localization.password}</div>
         <input
           className={styles.input__password}
           type={showPassword ? "text" : "password"}
