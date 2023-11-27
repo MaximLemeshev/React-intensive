@@ -1,0 +1,35 @@
+.card {
+  background-color: brown;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.tags_block {
+  display: flex;
+}
+.tags_item {
+  margin: 0 0 0 15px;
+  background-color: rgb(42, 165, 65);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 7px;
+}
+.tags_item:hover {
+  cursor: pointer;
+}
+.deleteBtn {
+  margin: 15px 0 0 0;
+}
+
+.favoriteBtn {
+  margin: 20px 0 0 0;
+}
+.favoriteBtn > button:not(:first-child) {
+  margin: 0 0 0 20px;
+}

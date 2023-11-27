@@ -1,8 +1,7 @@
+import { useLocalization } from "../../context/LocalizationContext";
+
 const ButtonSubmit = () => {
-  return (
-    <>
-      <button type="button">Submit</button>
-    </>
-  );
+  const { localization } = useLocalization();
+  return <button type="button">{localization.log_in}</button>;
 };
 export default ButtonSubmit;
