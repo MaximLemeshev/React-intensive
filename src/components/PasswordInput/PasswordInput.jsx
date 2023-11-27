@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styles from "./PasswordInput.module.css";
-// import { MyContext } from "../../MyContext/MyContext";
-// import { useContext } from "react";
 import { useLocalization } from "../../context/LocalizationContext";
 
 const PasswordInput = () => {
@@ -9,7 +7,6 @@ const PasswordInput = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
-  // const { locale, messages, changeLocale } = useLocalization();
   const { localization } = useLocalization();
 
   const handleUsernameChange = (e) => {

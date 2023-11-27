@@ -1,6 +1,4 @@
-// import { useContext } from "react";
 import { useLocalization } from "../../context/LocalizationContext";
-// import { MyContext } from "../../MyContext/MyContext";
 
 const ButtonSubmit = () => {
   const { localization } = useLocalization();
