@@ -4,8 +4,6 @@ import PublicNotes from "../components/PablicNotes/PablicNotes";
 import PersonalNotes from "../components/PersonalNotes/PersonalNotes";
 import PasswordChanger from "../components/PasswordChanger/PasswordChanger";
 import SingleNotes from "../components/SingleNote/SingleNote";
-// import { SettingsPage } from "/src/pages/SettingsPage";
-// import { SingleNotePage } from "../pages/SingleNotePage";
 
 export const router = createBrowserRouter([
   {

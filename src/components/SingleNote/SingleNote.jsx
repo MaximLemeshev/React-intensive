@@ -6,7 +6,6 @@ const SingleNotes = () => {
   const { noteId } = useParams();
   const mockNote = mockNotes.find((item) => item.id.toString() === noteId);
 
-  console.log(noteId);
   return (
     <>
       <NoteItem note={mockNote} />
