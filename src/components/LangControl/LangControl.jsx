@@ -1,4 +1,5 @@
 import { useLocalization } from "../../context/LocalizationContext";
+import s from "../LangControl/LangControl.module.css";
 import en from "../../localization/en";
 import ru from "../../localization/ru";
 
@@ -9,8 +10,12 @@ const LangControl = () => {
   };
   return (
     <>
-      <button onClick={() => handleLanguageChange(en)}>English</button>
-      <button onClick={() => handleLanguageChange(ru)}>Русский</button>
+      <button className={s.langBtn} onClick={() => handleLanguageChange(en)}>
+        English
+      </button>
+      <button className={s.langBtn} onClick={() => handleLanguageChange(ru)}>
+        Русский
+      </button>
     </>
   );
 };

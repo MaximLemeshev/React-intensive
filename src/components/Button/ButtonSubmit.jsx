@@ -1,5 +1,6 @@
 import { useLocalization } from "../../context/LocalizationContext";
 import { useNavigate } from "react-router-dom";
+import s from "../Button/ButtonSubmit.module.css";
 
 const ButtonSubmit = () => {
   const { localization } = useLocalization();
@@ -9,7 +10,7 @@ const ButtonSubmit = () => {
     navigate("/personal");
   };
   return (
-    <button onClick={handleSubmit} type="button">
+    <button className={s.submitBtn} onClick={handleSubmit} type="button">
       {localization.log_in}
     </button>
   );

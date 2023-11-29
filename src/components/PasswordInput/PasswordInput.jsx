@@ -32,7 +32,6 @@ const PasswordInput = () => {
           onChange={handleUsernameChange}
         />
       </label>
-      <br />
       <label>
         <div className={styles.label_disc}> {localization.password}</div>
         <input

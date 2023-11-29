@@ -4,6 +4,7 @@ import ButtonSubmit from "../Button/ButtonSubmit";
 import ErrorElement from "../Error/ErrorElement";
 import { useLocalization } from "../../context/LocalizationContext";
 
+
 export const Typography = () => {
   const { localization } = useLocalization();
   return (
