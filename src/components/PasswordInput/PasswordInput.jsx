@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./PasswordInput.module.css";
 import { useLocalization } from "../../context/LocalizationContext";
 
-const PasswordInput = () => {
+const PasswordInput = ({ onPasswordChange }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -15,6 +15,7 @@ const PasswordInput = () => {
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+    onPasswordChange(e.target.value);
   };
 
   const handleTogglePassword = () => {
