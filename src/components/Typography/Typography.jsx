@@ -1,7 +1,6 @@
 import styles from "./Typography.module.css";
 import PasswordInput from "../PasswordInput/PasswordInput";
 import ButtonSubmit from "../Button/ButtonSubmit";
-import ErrorElement from "../Error/ErrorElement";
 import { useLocalization } from "../../context/LocalizationContext";
 import { useState } from "react";
 
@@ -18,7 +17,6 @@ export const Typography = () => {
         <h1>{localization.log_in}</h1>
         <PasswordInput onPasswordChange={handlePasswordChange} />
         <ButtonSubmit password={password} />
-        <ErrorElement />
       </div>
     </>
   );
