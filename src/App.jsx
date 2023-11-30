@@ -1,19 +1,14 @@
 import "./App.css";
-import LoginScreen from "./components/LoginScreen/LoginScreen";
-import LangControl from "./components/LangControl/LangControl";
 import { LocalizationProvider } from "./context/LocalizationContext";
-// import PersonalNotes from "./components/PersonalNotes/PersonalNotes";
-// import PablicNotes from "./components/PablicNotes/PablicNotes";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./services/router";
 
 function App() {
   return (
     <>
       <LocalizationProvider>
-        <LangControl />
-        <LoginScreen />
+        <RouterProvider router={router} />
       </LocalizationProvider>
-      {/* <PersonalNotes /> */}
-      {/* <PablicNotes /> */}
     </>
   );
 }

@@ -1,0 +1,23 @@
+.langBtn {
+  padding: 10px 15px;
+  margin: 10px 7px;
+  cursor: pointer;
+  border: 2px solid #6b2a25;
+  border-radius: 5px;
+  color: #6b2a25;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+
+.langBtn:hover {
+  background-color: #6b2a25;
+  color: #fff;
+}
+
+.langBtn:active {
+  background-color: #6b2a25;
+  border-color: #6b2a25;
+  color: #fff;
+}

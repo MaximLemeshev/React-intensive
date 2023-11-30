@@ -23,8 +23,9 @@
 .tags_item:hover {
   cursor: pointer;
 }
-.deleteBtn {
-  margin: 15px 0 0 0;
+.deleteBtn,
+.showMoreBtn {
+  margin: 15px 15px 0 0;
 }
 
 .favoriteBtn {
