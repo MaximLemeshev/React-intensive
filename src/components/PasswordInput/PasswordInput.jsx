@@ -9,8 +9,6 @@ const PasswordInput = ({
   setUsername,
   setPassword,
 }) => {
-  // const [username, setUsername] = useState("");
-  // const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const { localization } = useLocalization();

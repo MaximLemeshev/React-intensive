@@ -1,13 +1,11 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useLogin from "../../context/LoginContext";
 import s from "../PasswordChanger/PasswordChanger.module.css";
 
 const PasswordChanger = () => {
   const [newPassword, setNewPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const { login } = useLogin();
   const navigate = useNavigate();
 
   const handleChange = (e) => {
