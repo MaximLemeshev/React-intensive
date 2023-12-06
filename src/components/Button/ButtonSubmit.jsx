@@ -1,31 +1,25 @@
 import { useLocalization } from "../../context/LocalizationContext";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 
 import s from "../Button/ButtonSubmit.module.css";
 
-const ButtonSubmit = ({ password }) => {
+const ButtonSubmit = ({ handleLogin, handleLogout }) => {
   const { localization } = useLocalization();
 
-  const [error, setError] = useState("");
+  const context = useContext(AuthContext);
 
-  const navigate = useNavigate();
-
-  const handleSubmit = (event) => {
-    if (password.length < 8) {
-      setError("Password must be at least 8 characters long.");
-    } else {
-      setError("");
-      event.preventDefault();
-      navigate("/personal");
-    }
-  };
   return (
     <>
-      {error && <div className={s.error}>{error}</div>}
-      <button className={s.submitBtn} onClick={handleSubmit} type="button">
-        {localization.log_in}
-      </button>
+      {context.isAuth ? (
+        <button className={s.submitBtn} onClick={handleLogout} type="button">
+          {localization.log_out}
+        </button>
+      ) : (
+        <button className={s.submitBtn} onClick={handleLogin} type="button">
+          {localization.log_in}
+        </button>
+      )}
     </>
   );
 };
